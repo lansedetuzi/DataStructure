@@ -16,6 +16,15 @@
     <Filter Include="LinearList">
       <UniqueIdentifier>{809da45b-47cd-45b6-9ff8-fb3a95e8b49b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="String">
+      <UniqueIdentifier>{86a43c14-d87c-45cd-a99e-6305d03e352f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Recursion">
+      <UniqueIdentifier>{edb5ecd8-ee9d-44ed-816a-03d9652acc3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tree">
+      <UniqueIdentifier>{b4a0a0b8-0dc2-4761-ae75-67675d8b01eb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -36,6 +45,15 @@
     <ClInclude Include="DList.h">
       <Filter>LinearList</Filter>
     </ClInclude>
+    <ClInclude Include="SeqString.h">
+      <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="RecursionDemo.h">
+      <Filter>Recursion</Filter>
+    </ClInclude>
+    <ClInclude Include="BiLTree.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -52,6 +70,15 @@
     </ClCompile>
     <ClCompile Include="DList.cpp">
       <Filter>LinearList</Filter>
+    </ClCompile>
+    <ClCompile Include="SeqString.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
+    <ClCompile Include="RecursionDemo.cpp">
+      <Filter>Recursion</Filter>
+    </ClCompile>
+    <ClCompile Include="BiLTree.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

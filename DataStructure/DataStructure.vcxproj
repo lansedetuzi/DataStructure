@@ -88,6 +88,7 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>LeetCode;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -145,8 +146,10 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="3SumClosest.h" />
     <ClInclude Include="BiLTree.h" />
     <ClInclude Include="DList.h" />
+    <ClInclude Include="LeetCode\3Sum.h" />
     <ClInclude Include="RecursionDemo.h" />
     <ClInclude Include="SeqList.h" />
     <ClInclude Include="SeqString.h" />
@@ -157,6 +160,7 @@
   <ItemGroup>
     <ClCompile Include="BiLTree.cpp" />
     <ClCompile Include="DList.cpp" />
+    <ClCompile Include="leetcodemain.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="RecursionDemo.cpp" />
     <ClCompile Include="SeqList.cpp" />

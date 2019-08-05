@@ -182,20 +182,20 @@ void testBiLTree()
     Destroy(&root);
 }
 
-int main()
-{
-	//testSeqList();
-
-	//testSList();
-
-    //testSeqString();
-
-    //testRecursionDemo();
-
-    testBiLTree();
-
-	system("pause");
-
-    return 0;
-}
+//int main()
+//{
+//	//testSeqList();
+//
+//	//testSList();
+//
+//    //testSeqString();
+//
+//    //testRecursionDemo();
+//
+//    testBiLTree();
+//
+//	system("pause");
+//
+//    return 0;
+//}
 

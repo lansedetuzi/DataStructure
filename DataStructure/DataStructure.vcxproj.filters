@@ -25,6 +25,15 @@
     <Filter Include="Tree">
       <UniqueIdentifier>{b4a0a0b8-0dc2-4761-ae75-67675d8b01eb}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LeetCode">
+      <UniqueIdentifier>{39deebfd-bca5-494a-9460-6fc31d7bf910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LeetCode\3Sum">
+      <UniqueIdentifier>{ff0ac84d-3e2b-4250-8e63-0394321c2cce}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LeetCode\3SumClosest">
+      <UniqueIdentifier>{ab7fc828-03dc-48be-b6c0-3ca2a5e03496}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -51,8 +60,14 @@
     <ClInclude Include="RecursionDemo.h">
       <Filter>Recursion</Filter>
     </ClInclude>
+    <ClInclude Include="LeetCode\3Sum.h">
+      <Filter>LeetCode\3Sum</Filter>
+    </ClInclude>
     <ClInclude Include="BiLTree.h">
-      <Filter>头文件</Filter>
+      <Filter>Tree</Filter>
+    </ClInclude>
+    <ClInclude Include="3SumClosest.h">
+      <Filter>LeetCode\3SumClosest</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -78,6 +93,9 @@
       <Filter>Recursion</Filter>
     </ClCompile>
     <ClCompile Include="BiLTree.cpp">
+      <Filter>Tree</Filter>
+    </ClCompile>
+    <ClCompile Include="leetcodemain.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

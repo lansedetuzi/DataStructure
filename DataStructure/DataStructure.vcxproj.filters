@@ -34,6 +34,27 @@
     <Filter Include="LeetCode\3SumClosest">
       <UniqueIdentifier>{ab7fc828-03dc-48be-b6c0-3ca2a5e03496}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LeetCode\AccountsMerge">
+      <UniqueIdentifier>{c3ac9c97-e1e4-424b-87fa-a251f15ae099}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LeetCode\AddBinary">
+      <UniqueIdentifier>{31d2005a-2e8b-4139-99ef-baa0ca7c1d53}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LeetCode\AddDigits">
+      <UniqueIdentifier>{8552b620-fb7f-4f84-95d3-5dd76ec77e3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LeetCode\AdditiveNumber">
+      <UniqueIdentifier>{94794b24-ffef-43b2-b753-e602a306bb46}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LeetCode\AddStrings">
+      <UniqueIdentifier>{180b1d27-532b-4dbb-8974-3f321e6e8178}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LeetCode\ArithmeticSlices">
+      <UniqueIdentifier>{e384f2a2-ae73-466e-8495-ee4bdb4af909}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LeetCode\BackspaceStringCmp">
+      <UniqueIdentifier>{8b40147f-2715-4871-b42f-d83535da9400}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -68,6 +89,27 @@
     </ClInclude>
     <ClInclude Include="3SumClosest.h">
       <Filter>LeetCode\3SumClosest</Filter>
+    </ClInclude>
+    <ClInclude Include="AccountsMerge.h">
+      <Filter>LeetCode\AccountsMerge</Filter>
+    </ClInclude>
+    <ClInclude Include="addBinary.h">
+      <Filter>LeetCode\AddBinary</Filter>
+    </ClInclude>
+    <ClInclude Include="addDigits.h">
+      <Filter>LeetCode\AddDigits</Filter>
+    </ClInclude>
+    <ClInclude Include="AdditiveNumber.h">
+      <Filter>LeetCode\AdditiveNumber</Filter>
+    </ClInclude>
+    <ClInclude Include="AddStrings.h">
+      <Filter>LeetCode\AddStrings</Filter>
+    </ClInclude>
+    <ClInclude Include="ArithmeticSlices.h">
+      <Filter>LeetCode\ArithmeticSlices</Filter>
+    </ClInclude>
+    <ClInclude Include="BackspaceStringCmp.h">
+      <Filter>LeetCode\BackspaceStringCmp</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

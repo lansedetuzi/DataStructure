@@ -147,6 +147,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3SumClosest.h" />
+    <ClInclude Include="AccountsMerge.h" />
+    <ClInclude Include="addBinary.h" />
+    <ClInclude Include="addDigits.h" />
+    <ClInclude Include="AdditiveNumber.h" />
+    <ClInclude Include="AddStrings.h" />
+    <ClInclude Include="ArithmeticSlices.h" />
+    <ClInclude Include="BackspaceStringCmp.h" />
     <ClInclude Include="BiLTree.h" />
     <ClInclude Include="DList.h" />
     <ClInclude Include="LeetCode\3Sum.h" />

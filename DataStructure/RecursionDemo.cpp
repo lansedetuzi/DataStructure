@@ -53,7 +53,7 @@ void HanoTower(int n, char from, char by, char to, int &step)
 
     HanoTower(n - 1, from, to, by, step);
 
-    printf("move disk%d from %c to %c\n", n, from, to, step++);
+    printf("move disk%d from %c to %c, %d\n", n, from, to, step++);
 
     HanoTower(n - 1, by, from, to, step);
 }

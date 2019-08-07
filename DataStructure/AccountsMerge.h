@@ -59,10 +59,10 @@ public:
         unordered_map<string, string> names; // names to email chains' head
 
                                              //initialization
-        for (int i = 0; i<accounts.size();i++) {
+        for (size_t i = 0; i<accounts.size();i++) {
             auto& account = accounts[i];
             auto& name = account[0];
-            for (int j = 1; j<account.size(); j++) {
+            for (size_t j = 1; j<account.size(); j++) {
                 auto& email = account[j];
                 if (names.find(email) == names.end()) {
                     emails_chains[email] = email;
@@ -127,7 +127,7 @@ public:
         unordered_map<int, string> names; // email id & name
 
                                           //initialization & join
-        for (int i = 0; i<accounts.size();i++) {
+        for (size_t i = 0; i<accounts.size();i++) {
 
             // using the account index as the emails group ID,
             // this could simplify the emails chain.
@@ -135,7 +135,7 @@ public:
 
             auto& account = accounts[i];
             auto& name = account[0];
-            for (int j = 1; j<account.size(); j++) {
+            for (size_t j = 1; j<account.size(); j++) {
                 auto& email = account[j];
                 if (emails_id.find(email) == emails_id.end()) {
                     emails_id[email] = i;
@@ -150,7 +150,7 @@ public:
 
         //reform the emails
         unordered_map<int, set<string>> res;
-        for (int i = 0; i<accounts.size(); i++) {
+        for (size_t i = 0; i<accounts.size(); i++) {
             int idx = find(emails_chains, i);
             res[idx].insert(accounts[i].begin() + 1, accounts[i].end());
         }

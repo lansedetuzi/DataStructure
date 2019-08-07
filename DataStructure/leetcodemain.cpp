@@ -3,6 +3,12 @@
 #include "3Sum.h"
 #include "3SumClosest.h"
 #include "AccountsMerge.h"
+#include "addBinary.h"
+#include "addDigits.h"
+#include "AdditiveNumber.h"
+#include "AddStrings.h"
+#include "ArithmeticSlices.h"
+#include "BackspaceStringCmp.h"
 
 #include <windows.h>
 #include <iostream>
@@ -34,13 +40,63 @@ void testAccountsMerge()
     int nSize = rel.size();
 }
 
+void testAddBinary()
+{
+    string a = "11";
+    string b = "1";
+    cout << a << "+" << b << "=" << addBinary(a, b) << endl;
+}
+
+void testAddDigits()
+{
+    AddDigits addDigits;
+    cout << addDigits.addDigits(38, 1);
+}
+
+void testAdditiveNumber()
+{
+    AdditiveNumberSolution solution;
+    cout << solution.isAdditiveNumber("199100199");
+}
+
+void testAddStrings()
+{
+    AddStringsSolution solution;
+    cout << solution.addStrings("245", "857") << endl;
+}
+
+void testArithmeticSlices()
+{
+    vector<int> vec = { 1, 3, 5, 7, 9, 11, 13 };
+    ArithmeticSlicesSolution solution;
+    cout << solution.numberOfArithmeticSlices(vec) << endl;
+}
+
+void testBackspaceStringCmpSolution()
+{
+    BackspaceStringCmpSolution so;
+    cout << so.backspaceCmp("a##b", "cd##a#b") << endl;
+}
+
 int main()
 {
     //test3Sum();
 
     //test3SumClosest();
 
-    testAccountsMerge();
+    //testAccountsMerge();
+
+    //testAddBinary();
+
+    //testAddDigits();
+
+    //testAdditiveNumber();
+
+    //testAddStrings();
+
+    //testArithmeticSlices();
+
+    //testBackspaceStringCmpSolution();
 
     system("pause");
 

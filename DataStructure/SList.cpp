@@ -31,14 +31,14 @@ int GetSListSize(SListNode *head)
 int InsertSListData(SListNode *head, const int pos, DataType data)
 {
 	SListNode *p = head;
-	int i = -1; // 头结点
-	while (NULL != p->next && i < pos - 1)
+	int i = 0; // 头结点
+	while (NULL != p->next && i < pos)
 	{
 		p = p->next;
 		++i;
 	}
 
-	if (i != pos - 1)
+	if (i != pos)
 	{
 		cout << "insert pos error..." << endl;
 		return -1;
@@ -60,14 +60,14 @@ int InsertSListData(SListNode *head, const int pos, DataType data)
 int DeleteSListData(SListNode *head, const int pos, DataType *data)
 {
 	SListNode *p = head;
-	int i = -1;
-	while (NULL != p->next && NULL != p->next->next && i < pos - 1)
+	int i = 0;
+	while (NULL != p->next && NULL != p->next->next && i < pos)
 	{
 		p = p->next;
 		++i;
 	}
 
-	if (i != pos - 1)
+	if (i != pos)
 	{
 		cout << "delete pos error..." << endl;
 		return -1;
@@ -83,8 +83,8 @@ int DeleteSListData(SListNode *head, const int pos, DataType *data)
 
 int GetSListData(SListNode *head, const int pos, DataType *data)
 {
-	SListNode *p = head;
-	int i = -1;
+	SListNode *p = head->next;
+	int i = 0;
 	while (NULL != p->next && i < pos)
 	{
 		p = p->next;

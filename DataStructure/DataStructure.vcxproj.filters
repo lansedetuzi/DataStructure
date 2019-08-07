@@ -16,6 +16,12 @@
     <Filter Include="LinearList">
       <UniqueIdentifier>{809da45b-47cd-45b6-9ff8-fb3a95e8b49b}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Stack">
+      <UniqueIdentifier>{4cf974ae-dc15-4904-8913-3aa6daebe5b9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Queue">
+      <UniqueIdentifier>{89414399-a2e4-4a37-b697-716d6a23afe1}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -36,6 +42,24 @@
     <ClInclude Include="DList.h">
       <Filter>LinearList</Filter>
     </ClInclude>
+    <ClInclude Include="SeqStack.h">
+      <Filter>Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkStack.h">
+      <Filter>Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="StackApplication.h">
+      <Filter>Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="SeqCQueue.h">
+      <Filter>Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="LinkQueue.h">
+      <Filter>Queue</Filter>
+    </ClInclude>
+    <ClInclude Include="SeqPQueue.h">
+      <Filter>Queue</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -52,6 +76,24 @@
     </ClCompile>
     <ClCompile Include="DList.cpp">
       <Filter>LinearList</Filter>
+    </ClCompile>
+    <ClCompile Include="SeqStack.cpp">
+      <Filter>Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkStack.cpp">
+      <Filter>Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="StackApplication.cpp">
+      <Filter>Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="SeqCQueue.cpp">
+      <Filter>Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkQueue.cpp">
+      <Filter>Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="SeqPQueue.cpp">
+      <Filter>Queue</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

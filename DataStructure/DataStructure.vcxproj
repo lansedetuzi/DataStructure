@@ -154,7 +154,17 @@
     <ClInclude Include="AddStrings.h" />
     <ClInclude Include="ArithmeticSlices.h" />
     <ClInclude Include="BackspaceStringCmp.h" />
+    <ClInclude Include="BasicCalculator1.h" />
     <ClInclude Include="BiLTree.h" />
+    <ClInclude Include="BTLevelOrderTraval.h" />
+    <ClInclude Include="BuddyString.h" />
+    <ClInclude Include="BurstBalloons.h" />
+    <ClInclude Include="Candy.h" />
+    <ClInclude Include="CoinChange.h" />
+    <ClInclude Include="Combination.h" />
+    <ClInclude Include="constructBinaryTreeFromInorderAndPostorderTraversal.h" />
+    <ClInclude Include="CountAndSay.h" />
+    <ClInclude Include="DecodeWays.h" />
     <ClInclude Include="DList.h" />
     <ClInclude Include="LinkQueue.h" />
     <ClInclude Include="LinkStack.h" />

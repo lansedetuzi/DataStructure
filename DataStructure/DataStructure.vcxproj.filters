@@ -91,6 +91,15 @@
     <Filter Include="LeetCode\DecodeWays">
       <UniqueIdentifier>{186b756a-830f-49ff-a7da-699a11b20cd8}</UniqueIdentifier>
     </Filter>
+    <Filter Include="LeetCode\DistinctSubsequence">
+      <UniqueIdentifier>{1deab280-f4e0-4a48-9682-f3d3fec40fbb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sort">
+      <UniqueIdentifier>{347e4df4-68fb-4bdd-93c3-d99b7c160ae4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Search">
+      <UniqueIdentifier>{4e136f96-d135-481e-bf7e-4b6e06ba5668}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -194,6 +203,27 @@
     </ClInclude>
     <ClInclude Include="DecodeWays.h">
       <Filter>LeetCode\DecodeWays</Filter>
+    </ClInclude>
+    <ClInclude Include="DistinctSubsequence.h">
+      <Filter>LeetCode\DistinctSubsequence</Filter>
+    </ClInclude>
+    <ClInclude Include="DirectInsertSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="ShellSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="HeapSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="BubbleSort.h">
+      <Filter>Sort</Filter>
+    </ClInclude>
+    <ClInclude Include="QuickSort.h">
+      <Filter>Sort</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

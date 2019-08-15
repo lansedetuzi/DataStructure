@@ -157,6 +157,7 @@
     <ClInclude Include="BasicCalculator1.h" />
     <ClInclude Include="BiLTree.h" />
     <ClInclude Include="BTLevelOrderTraval.h" />
+    <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="BuddyString.h" />
     <ClInclude Include="BurstBalloons.h" />
     <ClInclude Include="Candy.h" />
@@ -165,13 +166,19 @@
     <ClInclude Include="constructBinaryTreeFromInorderAndPostorderTraversal.h" />
     <ClInclude Include="CountAndSay.h" />
     <ClInclude Include="DecodeWays.h" />
+    <ClInclude Include="DirectInsertSort.h" />
+    <ClInclude Include="DistinctSubsequence.h" />
     <ClInclude Include="DList.h" />
+    <ClInclude Include="HeapSort.h" />
     <ClInclude Include="LinkQueue.h" />
     <ClInclude Include="LinkStack.h" />
+    <ClInclude Include="QuickSort.h" />
+    <ClInclude Include="SelectSort.h" />
     <ClInclude Include="SeqCQueue.h" />
     <ClInclude Include="SeqList.h" />
     <ClInclude Include="SeqPQueue.h" />
     <ClInclude Include="SeqStack.h" />
+    <ClInclude Include="ShellSort.h" />
     <ClInclude Include="SList.h" />
     <ClInclude Include="StackApplication.h" />
     <ClInclude Include="LeetCode\3Sum.h" />

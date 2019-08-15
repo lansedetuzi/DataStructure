@@ -52,7 +52,7 @@ int numDecodings(string s) {
 
 	dp[0] = check(s[0]);
 	dp[1] = check(s[0]) *  check(s[1]) + check(s[0], s[1]);
-	for (int i = 2; i < s.size(); i++)
+	for (size_t i = 2; i < s.size(); i++)
 	{
 		if (!isdigit(s[i]))
 			break;

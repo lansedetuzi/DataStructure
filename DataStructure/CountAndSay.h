@@ -29,7 +29,7 @@ using namespace std;
 
 string vecToStr(vector<int> v) {
 	stringstream ss;
-	for (int i = 0; i < v.size(); i++) {
+	for (size_t i = 0; i < v.size(); i++) {
 		ss << v[i];
 	}
 	return ss.str();
@@ -39,7 +39,7 @@ vector<int> getNext(vector<int>& v) {
 	int cnt = 0;
 	int val = 0;
 	vector<int> ret;
-	for (int i = 0; i < v.size(); i++) {
+	for (size_t i = 0; i < v.size(); i++) {
 		if (i == 0) {
 			val = v[i];
 			cnt = 1;

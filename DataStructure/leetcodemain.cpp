@@ -19,6 +19,13 @@
 #include "constructBinaryTreeFromInorderAndPostorderTraversal.h"
 #include "CountAndSay.h"
 #include "DecodeWays.h"
+#include "DistinctSubsequence.h"
+#include "DirectInsertSort.h"
+#include "ShellSort.h"
+#include "SelectSort.h"
+#include "HeapSort.h"
+#include "BubbleSort.h"
+#include "QuickSort.h"
 
 #include <windows.h>
 #include <iostream>
@@ -200,10 +207,52 @@ void testCountAndSay()
 	cout << countAndSay(n) << endl;
 }
 
+void testDistinctSubsequence()
+{
+	string s = "rabbbit";
+	string t = "rabbit";
+	cout << "S=\"" << s << "\"  T=\"" << t << "\"" << endl;
+	cout << "numDistinct = " << numDistinct1(s, t) << endl;
+}
+
 void testDecodeWays()
 {
 	string s = "1234";
 	cout << "\"" << s << "\" : " << numDecodings(s) << endl;
+}
+
+void printArray(int array[], int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << array[i] << " ";
+	}
+	cout << endl;
+}
+
+void testSort()
+{
+	int array[10] = {12, 10, 3, 8, 33, 5, 91, 23, 8, 7};
+	printArray(array, 10);
+
+	//DirectInsertSort(array, 10); 
+	//printArray(array, 10);
+	
+	//int d[3] = {5, 2, 1};
+	//ShellSort(array, 10, d, 3);
+	//printArray(array, 10);
+
+	//SelectSort(array, 10);
+	//printArray(array, 10);
+
+	//HeapSort(array, 10);
+	//printArray(array, 10);
+
+	//BubbleSort(array, 10);
+	//printArray(array, 10);
+
+	QuickSort(array, 0, 9);
+	printArray(array, 10);
 }
 
 int main()
@@ -244,7 +293,11 @@ int main()
 
 	//testCountAndSay();
 
-	testDecodeWays();
+	//testDecodeWays();
+
+	//testDistinctSubsequence();
+
+	testSort();
 
     system("pause");
 

@@ -172,7 +172,9 @@
     <ClInclude Include="HeapSort.h" />
     <ClInclude Include="LinkQueue.h" />
     <ClInclude Include="LinkStack.h" />
+    <ClInclude Include="MergeSort.h" />
     <ClInclude Include="QuickSort.h" />
+    <ClInclude Include="RadixSort.h" />
     <ClInclude Include="SelectSort.h" />
     <ClInclude Include="SeqCQueue.h" />
     <ClInclude Include="SeqList.h" />

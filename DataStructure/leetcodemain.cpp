@@ -26,6 +26,8 @@
 #include "HeapSort.h"
 #include "BubbleSort.h"
 #include "QuickSort.h"
+#include "MergeSort.h"
+#include "RadixSort.h"
 
 #include <windows.h>
 #include <iostream>
@@ -251,7 +253,13 @@ void testSort()
 	//BubbleSort(array, 10);
 	//printArray(array, 10);
 
-	QuickSort(array, 0, 9);
+	//QuickSort(array, 0, 9);
+	//printArray(array, 10);
+
+	//MergeSort(array, 10);
+	//printArray(array, 10);
+
+	RadixSort(array, 10, 2, 10);
 	printArray(array, 10);
 }
 

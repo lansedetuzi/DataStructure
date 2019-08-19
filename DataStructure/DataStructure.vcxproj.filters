@@ -231,6 +231,18 @@
     <ClInclude Include="RadixSort.h">
       <Filter>Sort</Filter>
     </ClInclude>
+    <ClInclude Include="SeqListSearch.h">
+      <Filter>Search</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySearch.h">
+      <Filter>Search</Filter>
+    </ClInclude>
+    <ClInclude Include="BinarySortTree.h">
+      <Filter>Search</Filter>
+    </ClInclude>
+    <ClInclude Include="HashTable.h">
+      <Filter>Search</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">

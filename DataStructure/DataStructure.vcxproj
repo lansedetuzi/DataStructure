@@ -156,6 +156,8 @@
     <ClInclude Include="BackspaceStringCmp.h" />
     <ClInclude Include="BasicCalculator1.h" />
     <ClInclude Include="BiLTree.h" />
+    <ClInclude Include="BinarySearch.h" />
+    <ClInclude Include="BinarySortTree.h" />
     <ClInclude Include="BTLevelOrderTraval.h" />
     <ClInclude Include="BubbleSort.h" />
     <ClInclude Include="BuddyString.h" />
@@ -169,6 +171,7 @@
     <ClInclude Include="DirectInsertSort.h" />
     <ClInclude Include="DistinctSubsequence.h" />
     <ClInclude Include="DList.h" />
+    <ClInclude Include="HashTable.h" />
     <ClInclude Include="HeapSort.h" />
     <ClInclude Include="LinkQueue.h" />
     <ClInclude Include="LinkStack.h" />
@@ -178,6 +181,7 @@
     <ClInclude Include="SelectSort.h" />
     <ClInclude Include="SeqCQueue.h" />
     <ClInclude Include="SeqList.h" />
+    <ClInclude Include="SeqListSearch.h" />
     <ClInclude Include="SeqPQueue.h" />
     <ClInclude Include="SeqStack.h" />
     <ClInclude Include="ShellSort.h" />

@@ -259,8 +259,8 @@ void testSort()
 	//MergeSort(array, 10);
 	//printArray(array, 10);
 
-	RadixSort(array, 10, 2, 10);
-	printArray(array, 10);
+	//RadixSort(array, 10, 2, 10);
+	//printArray(array, 10);
 }
 
 int main()
@@ -305,7 +305,7 @@ int main()
 
 	//testDistinctSubsequence();
 
-	testSort();
+	//testSort();
 
     system("pause");
 

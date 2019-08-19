@@ -100,6 +100,9 @@
     <Filter Include="Search">
       <UniqueIdentifier>{4e136f96-d135-481e-bf7e-4b6e06ba5668}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ThreadPool">
+      <UniqueIdentifier>{c73c61a3-d24b-4da1-946c-80054761c335}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -243,6 +246,9 @@
     <ClInclude Include="HashTable.h">
       <Filter>Search</Filter>
     </ClInclude>
+    <ClInclude Include="ThreadPool.h">
+      <Filter>ThreadPool</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -289,6 +295,9 @@
     </ClCompile>
     <ClCompile Include="leetcodemain.cpp">
       <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ThreadPool.cpp">
+      <Filter>ThreadPool</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

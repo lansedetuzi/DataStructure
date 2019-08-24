@@ -288,34 +288,117 @@ void testBiLTree()
 
     Initial(&root);
 
-    p = InsertLeftChild(root, 'A');
-    p = InsertLeftChild(p, 'B');
-    p = InsertLeftChild(p, 'D');
-    p = InsertRightChild(p, 'G');
-    p = InsertRightChild(root->leftChild, 'C');
+    //p = InsertLeftChild(root, 'A');
+    //p = InsertLeftChild(p, 'B');
+    //p = InsertLeftChild(p, 'D');
+    //p = InsertRightChild(p, 'G');
+    //p = InsertRightChild(root->leftChild, 'C');
 
-    pp = p;
-    InsertLeftChild(p, 'E');
-    InsertRightChild(pp, 'F');
+    //pp = p;
+    //InsertLeftChild(p, 'E');
+    //InsertRightChild(pp, 'F');
+
+	p = InsertLeftChild(root, 'A');
+	InsertLeftChild(p, 'C');
+	InsertRightChild(p, 'D');
+	p = InsertRightChild(root, 'B');
+	InsertLeftChild(p, 'E');
+	InsertRightChild(p, 'F');
 
     cout << "PreOrder: " << endl;
     PreOrder(root, Visit);
     cout << endl;
 
+	cout << "PreOrderNonRecur: " << endl;
+	PreOrderNonRecur(root, Visit);
+	cout << endl;
+
     cout << "InOrder: " << endl;
     InOrder(root, Visit);
     cout << endl;
+
+	cout << "InOrderNonRecur: " << endl;
+	InOrderNonRecur(root, Visit);
+	cout << endl;
 
     cout << "PostOrder: " << endl;
     PostOrder(root, Visit);
     cout << endl;
 
-    printf("%c\n", Search(root, 'G')->data);
+	cout << "PostOrderNonRecur: " << endl;
+	PostOrderNonRecur(root, Visit);
+	cout << endl;
+
+	cout << "LevelOrderNon: " << endl;
+	LevelOrder(root, Visit);
+	cout << endl;
+
+	cout << "Height: " << Height(root) << endl;
+	cout << "TotalLeafNode: " << TotalLeafNode(root) << endl;
+	cout << "1 level node count: " << KLevelNodeCount(root, 1) << endl;
+	cout << "2 level node count: " << KLevelNodeCount(root, 2) << endl;
+	cout << "3 level node count: " << KLevelNodeCount(root, 3) << endl;
+
+	cout << "is balance: " << IsBalance(root) << endl;
+	
+	p = Search(root, 'G');
+	if (p)
+		printf("%c\n", p->data);
 
     Destroy(&root);
 }
 
-int main1()
+void testString()
+{
+	SeqString s1, s2;
+	StringInitial(&s1, "i am a programmer.");
+	StringInitial(&s2, "programmer");
+
+	// assign
+	SeqString s3;
+	StringInitial(&s3);
+	StringAssign(&s3, s2);
+	cout << s3.data << endl;
+
+	// length
+	cout << s1.length << endl;
+	cout << s2.length << endl;
+	cout << s3.length << endl;
+
+	// compare
+	SeqString s4;
+	SeqString s5;
+	SeqString s6;
+	SeqString s7;
+	StringInitial(&s4, "programmer");
+	StringInitial(&s5, "programmer11");
+	StringInitial(&s6, "program");
+	StringInitial(&s7, "project");
+	cout << StringCompare(s2, s4) << endl;
+	cout << StringCompare(s2, s5) << endl;
+	cout << StringCompare(s2, s6) << endl;
+	cout << StringCompare(s2, s7) << endl;
+
+	// insert 
+	SeqString s8;
+	StringInitial(&s8, " c plus plus");
+	StringInsert(&s1, 6, s8);
+	cout << s1.data << endl;
+
+	// delete
+	StringDelete(&s1, 0, 5);
+	cout << s1.data << endl;
+
+	// substring
+	SeqString s9;
+	StringInitial(&s9);
+	SubString(s5, 10, 2, &s9);
+	cout << s9.data << endl;
+
+	cout << StringSearch(s1, 0, s2, SSA_KMP) << endl;
+}
+
+int main()
 {
 	//testSeqList();
 
@@ -335,54 +418,11 @@ int main1()
 
 	//testLinkQueue();
 
-	testPQueue();
+	//testPQueue();
 
-	SeqString s1, s2;
-    StringInitial(&s1, "i am a programmer.");
-    StringInitial(&s2, "programmer");
+	//testBiLTree();
 
-    // assign
-    SeqString s3;
-    StringInitial(&s3);
-    StringAssign(&s3, s2);
-    cout << s3.data << endl;
-
-    // length
-    cout << s1.length << endl;
-    cout << s2.length << endl;
-    cout << s3.length << endl;
-
-    // compare
-    SeqString s4;
-    SeqString s5;
-    SeqString s6;
-    SeqString s7;
-    StringInitial(&s4, "programmer");
-    StringInitial(&s5, "programmer11");
-    StringInitial(&s6, "program");
-    StringInitial(&s7, "project");
-    cout << StringCompare(s2, s4) << endl;
-    cout << StringCompare(s2, s5) << endl;
-    cout << StringCompare(s2, s6) << endl;
-    cout << StringCompare(s2, s7) << endl;
-
-    // insert 
-    SeqString s8;
-    StringInitial(&s8, " c plus plus");
-    StringInsert(&s1, 6, s8);
-    cout << s1.data << endl;
-
-    // delete
-    StringDelete(&s1, 0, 5);
-    cout << s1.data << endl;
-
-    // substring
-    SeqString s9;
-    StringInitial(&s9);
-    SubString(s5, 10, 2, &s9);
-    cout << s9.data << endl;
-
-    cout << StringSearch(s1, 0, s2, SSA_KMP) << endl;
+	//testString();
 
 	system("pause");
 

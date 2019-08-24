@@ -302,8 +302,8 @@ void testSort()
 	//printArray(array, 10);
 }
 
-int main()
-{
+//int main()
+//{
     //test3Sum();
 
     //test3SumClosest();
@@ -347,8 +347,8 @@ int main()
 	//testSort();
 
     //testThreadPool();
-
-    system("pause");
-
-    return 0;
-}
+//
+//    system("pause");
+//
+//    return 0;
+//}

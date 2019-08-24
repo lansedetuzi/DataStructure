@@ -21,8 +21,20 @@ BiLTreeNode* DeleteLeftChild(BiLTreeNode *curr);
 BiLTreeNode* DeleteRightChild(BiLTreeNode *curr);
 
 void PreOrder(BiLTreeNode *curr, void Visit(DataType item));
+void PreOrderNonRecur(BiLTreeNode *curr, void Visit(DataType item));
 void InOrder(BiLTreeNode *curr, void Visit(DataType item));
+void InOrderNonRecur(BiLTreeNode *curr, void Visit(DataType item));
 void PostOrder(BiLTreeNode *curr, void Visit(DataType item));
+void PostOrderNonRecur(BiLTreeNode *curr, void Visit(DataType item));
+
+void LevelOrder(BiLTreeNode *curr, void Visit(DataType item));
+
+int Height(BiLTreeNode *curr);
+int TotalLeafNode(BiLTreeNode *curr);
+int KLevelNodeCount(BiLTreeNode *curr, int k);
+
+BiLTreeNode* FindNearestCommonAncestor(BiLTreeNode *curr, DataType x1, DataType x2);
+bool IsBalance(BiLTreeNode *curr);
 
 BiLTreeNode* Search(BiLTreeNode *curr, DataType x);
 

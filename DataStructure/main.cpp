@@ -15,6 +15,8 @@
 #include "SeqString.h"
 #include "RecursionDemo.h"
 #include "BiLTree.h"
+#include "String.h"
+#include "StringFunc.h"
 
 #include <stdio.h>
 #include <iostream>
@@ -398,9 +400,59 @@ void testString()
 	cout << StringSearch(s1, 0, s2, SSA_KMP) << endl;
 }
 
+void testString1()
+{
+    const char source[] = "abcdefg";
+    char dest[20] = {0};
+    StringCopy(dest, source, strlen(source));
+    cout << "dest: " << dest << endl;
+
+    StringCat(dest, "sssss", 5);
+    cout << dest << endl;
+
+    char str1[] = "sfsdfq";
+    char str2[] = "sfsdfq4";
+    cout << StringCmp(str1, str2) << endl;
+    cout << "str1 len: " << StringLen(str1) << ", str2 len: " << StringLen(str2) << endl;
+
+    cout << StringChr(str1, 'd') << ", " << StringChr(str1, 's') << endl;
+    cout << StringRChr(str2, 'f') << ", " << StringRChr(str2, 'q') << endl;
+
+    char *str3 = StringDup(str1);
+    cout << str3 << endl;
+
+    cout << StringRev(str3) << endl;
+
+    cout << StringStr("qwersdfasdf", "sdf") << endl;
+
+    char str4[] = "QSfasEWSdsdfAEdf";
+    char str5[32] = { 0 };
+    StringToLower(str5, str4);
+    cout << str5 << endl;
+
+    char str6[] = "wersdf,sdgert,wer234,dsf2453,we";
+    char p[10][20] = { 0 };
+    int nCount = StringSplit(str6, 's', p);
+    int nTotal = sizeof(p);
+    int nEach = sizeof(p[0]);
+    for (int i = 0; i < nCount; i++)
+    {
+        cout << p[i] << endl;
+    }
+}
+
+void testHuaWeiString()
+{
+    const char str1[] = "ABSIB T";
+    cout << "last word's length of str1: " << LastWordLenOfString(str1) << endl;
+
+    const char str2[] = "nhrwlbcc8m7c5hih9mhalw98k0322wf2jjm47kk3ntm9snfrflzzundn7d608usy049asxalzjk7izj6amcqhr8uubc04g52mcjboj2fmge2l6iarizfu4yve5o4i3srf5zgqbg82ckcotdeqp760mc9gzei5dzk5gj9x9yj05o3hle0ii64krkkp5i7blh7nbu3gu5vgi2scyn4yqx3z4vcjbyzhnqkh887izotjkg2l0mit0k14vyn39";
+    cout << "l count of str1: " << LetterCountOfString(str2, 't') << endl;
+}
+
 int main()
 {
-	//testSeqList();
+    //testSeqList();
 
 	//testSList();
 
@@ -423,6 +475,10 @@ int main()
 	//testBiLTree();
 
 	//testString();
+
+    //testString1();
+
+    testHuaWeiString();
 
 	system("pause");
 

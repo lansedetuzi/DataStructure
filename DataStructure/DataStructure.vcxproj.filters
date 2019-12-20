@@ -103,6 +103,9 @@
     <Filter Include="ThreadPool">
       <UniqueIdentifier>{c73c61a3-d24b-4da1-946c-80054761c335}</UniqueIdentifier>
     </Filter>
+    <Filter Include="HUAWEI">
+      <UniqueIdentifier>{e37f997c-4f70-4e8b-a458-72321d0042a0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Text Include="ReadMe.txt" />
@@ -249,6 +252,12 @@
     <ClInclude Include="ThreadPool.h">
       <Filter>ThreadPool</Filter>
     </ClInclude>
+    <ClInclude Include="String.h">
+      <Filter>String</Filter>
+    </ClInclude>
+    <ClInclude Include="StringFunc.h">
+      <Filter>HUAWEI</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -298,6 +307,12 @@
     </ClCompile>
     <ClCompile Include="ThreadPool.cpp">
       <Filter>ThreadPool</Filter>
+    </ClCompile>
+    <ClCompile Include="String.cpp">
+      <Filter>String</Filter>
+    </ClCompile>
+    <ClCompile Include="StringFunc.cpp">
+      <Filter>HUAWEI</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

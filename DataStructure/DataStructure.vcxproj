@@ -173,6 +173,7 @@
     <ClInclude Include="DList.h" />
     <ClInclude Include="HashTable.h" />
     <ClInclude Include="HeapSort.h" />
+    <ClInclude Include="LinkNodeFunc.h" />
     <ClInclude Include="LinkQueue.h" />
     <ClInclude Include="LinkStack.h" />
     <ClInclude Include="MergeSort.h" />
@@ -200,6 +201,7 @@
     <ClCompile Include="BiLTree.cpp" />
     <ClCompile Include="DList.cpp" />
     <ClCompile Include="leetcodemain.cpp" />
+    <ClCompile Include="LinkNodeFunc.cpp" />
     <ClCompile Include="LinkQueue.cpp" />
     <ClCompile Include="LinkStack.cpp" />
     <ClCompile Include="main.cpp" />

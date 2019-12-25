@@ -258,6 +258,9 @@
     <ClInclude Include="StringFunc.h">
       <Filter>HUAWEI</Filter>
     </ClInclude>
+    <ClInclude Include="LinkNodeFunc.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
@@ -313,6 +316,9 @@
     </ClCompile>
     <ClCompile Include="StringFunc.cpp">
       <Filter>HUAWEI</Filter>
+    </ClCompile>
+    <ClCompile Include="LinkNodeFunc.cpp">
+      <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

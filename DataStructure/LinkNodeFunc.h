@@ -2,9 +2,14 @@
 
 struct LinkNode
 {
-    char data;
+    int data;
     LinkNode *next;
 };
+
+/*
+@brief: 正向打印单链表
+*/
+void LinkListPrint(LinkNode *head);
 
 /*
 @brief: 逆序打印单链表

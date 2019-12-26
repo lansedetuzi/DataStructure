@@ -17,6 +17,7 @@
 #include "BiLTree.h"
 #include "String.h"
 #include "StringFunc.h"
+#include "LinkNodeFunc.h"
 
 #include <stdio.h>
 #include <iostream>
@@ -450,6 +451,33 @@ void testHuaWeiString()
     cout << "l count of str1: " << LetterCountOfString(str2, 't') << endl;
 }
 
+void testLinkNodeFunc()
+{
+    LinkNode *pHead = new LinkNode;
+    pHead->data = -1;
+    LinkNode *pLast = pHead;
+
+    for (int i = 0; i < 8; i++)
+    {
+        LinkNode *pTmp = new LinkNode;
+        pTmp->data =  i + 1;
+        pTmp->next = nullptr;
+
+        pLast->next = pTmp;
+        pLast = pTmp;
+    }
+    pLast->next = pHead->next;
+
+    //cout << "正向打印:" << endl;
+    //LinkListPrint(pHead);
+
+    //cout << "逆向向打印:" << endl;
+    //LinkListReversePrint(pHead);
+
+    cout << "约瑟夫环: " << endl;
+    JosephCircle(pHead, 5);
+}
+
 int main()
 {
     //testSeqList();
@@ -478,7 +506,9 @@ int main()
 
     //testString1();
 
-    testHuaWeiString();
+    //testHuaWeiString();
+
+    testLinkNodeFunc();
 
 	system("pause");
 

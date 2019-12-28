@@ -442,13 +442,101 @@ void testString1()
     }
 }
 
+int N, M;// 分别代表行和列
+vector<vector<int>> maze; // 迷宫矩阵
+vector<vector<int>> path_temp;// 存储当前路径，第一维标识位置
+vector<vector<int>> path_best;// 存储最佳路径
+
+void MazeTrack(int i, int j)
+{
+    maze[i][j] = 1;// 表示当前节点已走，不可再走
+    path_temp.push_back({i, j}); // 当前节点加入到路径中
+
+    if (i == N - 1 && j == M - 1)   // 判断是否到达终点
+        if (path_best.empty() || path_temp.size() < path_best.size())
+            path_best = path_temp;
+
+    if (i - 1 >= 0 && maze[i - 1][j] == 0) // 探索向上走是否可行
+        MazeTrack(i - 1, j);
+    if (i + 1 < N && maze[i + 1][j] == 0) // 探索向下走是否可行
+        MazeTrack(i + 1, j);
+    if (j - 1 >= 0 && maze[i][j - 1] == 0) // 探索向左走是否可行
+        MazeTrack(i, j - 1);
+    if (j + 1 < M && maze[i][j + 1] == 0) // 探索向左走是否可行
+        MazeTrack(i, j + 1);
+
+    maze[i][j] = 0; // 恢复现场，设为未走
+
+    path_temp.pop_back();
+}
+
 void testHuaWeiString()
 {
-    const char str1[] = "ABSIB T";
-    cout << "last word's length of str1: " << LastWordLenOfString(str1) << endl;
+    //const char str1[] = "ABSIB T";
+    //cout << "last word's length of str1: " << LastWordLenOfString(str1) << endl;
 
-    const char str2[] = "nhrwlbcc8m7c5hih9mhalw98k0322wf2jjm47kk3ntm9snfrflzzundn7d608usy049asxalzjk7izj6amcqhr8uubc04g52mcjboj2fmge2l6iarizfu4yve5o4i3srf5zgqbg82ckcotdeqp760mc9gzei5dzk5gj9x9yj05o3hle0ii64krkkp5i7blh7nbu3gu5vgi2scyn4yqx3z4vcjbyzhnqkh887izotjkg2l0mit0k14vyn39";
-    cout << "l count of str1: " << LetterCountOfString(str2, 't') << endl;
+    //const char str2[] = "nhrwlbcc8m7c5hih9mhalw98k0322wf2jjm47kk3ntm9snfrflzzundn7d608usy049asxalzjk7izj6amcqhr8uubc04g52mcjboj2fmge2l6iarizfu4yve5o4i3srf5zgqbg82ckcotdeqp760mc9gzei5dzk5gj9x9yj05o3hle0ii64krkkp5i7blh7nbu3gu5vgi2scyn4yqx3z4vcjbyzhnqkh887izotjkg2l0mit0k14vyn39";
+    //cout << "l count of str1: " << LetterCountOfString(str2, 't') << endl;
+
+    //FamaWeight();
+
+    //while (cin >> N >> M)
+    //{
+    //    maze = vector<vector<int>>(N, vector<int>(M, 0));
+    //    path_temp.clear();
+    //    path_best.clear();
+    //    for (auto &i : maze)
+    //    {
+    //        for (auto &j : i)
+    //        {
+    //            cin >> j;
+    //        }
+    //    }
+    //    MazeTrack(0, 0);
+    //    for (auto i : path_best)
+    //        cout << '(' << i[0] << ',' << i[1] << ')' << endl;//输出通路
+    //}
+
+    //int n;
+    //while (cin >> n)
+    //{
+    //    vector<int> vecScore;
+    //    for (int i = 0; i < n; i++)
+    //    {
+    //        string strTmp;
+    //        cin >> strTmp;
+    //        vecScore.push_back(CalScore(strTmp));
+    //    }
+
+    //    for (int i = 0; i < n; i++)
+    //    {
+    //        cout << vecScore[i] << endl;
+    //    }
+    //}
+
+    string str;
+    int n;
+    while (cin >> str >> n)
+    {
+        int i = 0;
+        for (; i < str.length(); i++)
+        {
+            if (n <= 1 && (i + 1 < str.length()) && (str[i + 1] >= 0 && str[i + 1] <= 255))
+            {
+                break;
+            }
+            char c = str[i];
+            if (c >= 0 && c <= 255)
+            {
+                n--;
+            }
+            else
+            {
+                n -= 2;
+            }
+        }
+        cout << str.substr(0, i + 1) << endl;
+    }
 }
 
 void testLinkNodeFunc()
@@ -506,9 +594,9 @@ int main()
 
     //testString1();
 
-    //testHuaWeiString();
+    testHuaWeiString();
 
-    testLinkNodeFunc();
+    //testLinkNodeFunc();
 
 	system("pause");
 

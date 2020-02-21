@@ -1,23 +1,26 @@
 #pragma once
 
-void ShellSort(int array[], int n, int d[], int numd)
+void ShellInsertSort(int a[], const int n, int d)
 {
-	for (int i = 0; i < numd; i++)
+	for (int i = 0; i < n - d; i++)
 	{
-		int span = d[i];
-		for (int j = 0; j < span; j++)
+		int nTmp = a[i + d];
+		int j = i;
+		while (j >= 0 && nTmp < a[j])
 		{
-			for (int m = j; m < n - span; m += span)
-			{
-				int nTemp = array[m + span];
-				int n = m;
-				while (n >= 0 && nTemp < array[m])
-				{
-					array[m + span] = array[m];
-					m -= span;
-				}
-				array[m + span] = nTemp;
-			}
+			a[j + d] = a[j];
+			j -= d;
 		}
+		a[j + d] = nTmp;
+	}
+}
+
+void ShellSort(int a[], const int n)
+{
+	int d = n / 2;
+	while (d >= 1)
+	{
+		ShellInsertSort(a, n, d);
+		d /= 2;
 	}
 }

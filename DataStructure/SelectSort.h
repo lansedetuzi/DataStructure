@@ -15,9 +15,9 @@ void SelectSort(int a[], int n)
 
 		if (nSmallestIndex != i)
 		{
-			int nTemp = a[nSmallestIndex];
+			int nTmp = a[nSmallestIndex];
 			a[nSmallestIndex] = a[i];
-			a[i] = nTemp;
+			a[i] = nTmp;
 		}
 	}
 }

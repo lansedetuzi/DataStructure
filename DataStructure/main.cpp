@@ -21,6 +21,7 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <stack>
 using namespace std;
 
 void testSeqList()
@@ -470,6 +471,118 @@ void MazeTrack(int i, int j)
     path_temp.pop_back();
 }
 
+void Calc()
+{
+	string expre;
+	while (cin >> expre) {
+		vector<char> exp;
+		stack<char> op;
+		// 3-10+(0+(10+5+3)-10)
+		// 3 10 - 0 10 5 + 3 + + 10 - +
+		for (size_t i = 0; i < expre.length(); i++) {
+			if (expre[i] >= '0' && expre[i] <= '9') {
+				if (i > 0 && expre[i - 1] >= '0' && expre[i - 1] <= '9') {
+					int tmp = exp.back() - '0';
+					tmp = tmp * 10 + expre[i];
+					exp.pop_back();
+					exp.push_back(tmp);
+				}
+				else {
+					exp.push_back(expre[i]);
+				}
+			}
+			else if (expre[i] == ')') {
+				while (!op.empty() && op.top() != '(') {
+					exp.push_back(op.top());
+					op.pop();
+				}
+				op.pop();
+			}
+			else if (expre[i] == '-' || expre[i] == '+') {
+				if (expre[i] == '-') {
+					if (i == 0 || expre[i - 1] == '(') {
+						exp.push_back('0');
+					}
+				}
+				while (!op.empty() && (op.top() == '+' || op.top() == '-' || op.top() == '*' || op.top() == '/')) {
+					exp.push_back(op.top());
+					op.pop();
+				}
+				op.push(expre[i]);
+			}
+			else if (expre[i] == '*' || expre[i] == '/') {
+				while (!op.empty() && (op.top() == '*' || op.top() == '/')) {
+					exp.push_back(op.top());
+					op.pop();
+				}
+				op.push(expre[i]);
+			}
+			else {
+				op.push(expre[i]);
+			}
+		}
+
+		while (!op.empty()) {
+			exp.push_back(op.top());
+			op.pop();
+		}
+
+		stack<int> res;
+		for (size_t i = 0; i < exp.size(); i++) {
+			if (exp[i] == '+' || exp[i] == '-' || exp[i] == '*' || exp[i] == '/') {
+				int val1 = res.top();
+				res.pop();
+				int val2 = res.top();
+				res.pop();
+				int tmp;
+				if (exp[i] == '+') {
+					tmp = val2 + val1;
+				}
+				else if (exp[i] == '-') {
+					tmp = val2 - val1;
+				}
+				else if (exp[i] == '*') {
+					tmp = val2 * val1;
+				}
+				else if (exp[i] == '/') {
+					tmp = val2 / val1;
+				}
+				res.push(tmp);
+			}
+			else {
+				res.push(exp[i] - '0');
+			}
+		}
+		cout << res.top() << endl;
+	}
+}
+
+struct ErrData
+{
+	string strFilename;
+	int nLineNo;
+	int nCount;
+
+	ErrData() :
+		strFilename("")
+		, nLineNo(0)
+		, nCount(0)
+	{}
+
+	bool operator==(const ErrData &data)
+	{
+		if (0 == strFilename.compare(data.strFilename)
+			&& nLineNo == data.nLineNo)
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
+};
+
 void testHuaWeiString()
 {
     //const char str1[] = "ABSIB T";
@@ -514,29 +627,91 @@ void testHuaWeiString()
     //    }
     //}
 
-    string str;
-    int n;
-    while (cin >> str >> n)
-    {
-        int i = 0;
-        for (; i < str.length(); i++)
-        {
-            if (n <= 1 && (i + 1 < str.length()) && (str[i + 1] >= 0 && str[i + 1] <= 255))
-            {
-                break;
-            }
-            char c = str[i];
-            if (c >= 0 && c <= 255)
-            {
-                n--;
-            }
-            else
-            {
-                n -= 2;
-            }
-        }
-        cout << str.substr(0, i + 1) << endl;
-    }
+    //string str;
+    //int n;
+    //while (cin >> str >> n)
+    //{
+    //    int i = 0;
+    //    for (; i < str.length(); i++)
+    //    {
+    //        if (n <= 1 && (i + 1 < str.length()) && (str[i + 1] >= 0 && str[i + 1] <= 255))
+    //        {
+    //            break;
+    //        }
+    //        char c = str[i];
+    //        if (c >= 0 && c <= 255)
+    //        {
+    //            n--;
+    //        }
+    //        else
+    //        {
+    //            n -= 2;
+    //        }
+    //    }
+    //    cout << str.substr(0, i + 1) << endl;
+    //}
+
+	//ThreadSync();
+	
+	string str;
+	while (cin >> str)
+	{
+		bool bCap = false;
+		bool bLow = false;
+		bool bNum = false;
+		bool bOther = false;
+		int nCount = 0;
+		int nlen = str.length();
+		if (nlen <= 8)
+		{
+			cout << "NG" << endl;
+			continue;
+		}
+
+		for (int i = 0; i < nlen; i++)
+		{
+			if (str[i] >= '0' && str[i] <= '9' && !bNum)
+			{
+				bNum = true;
+				nCount++;
+			}
+			else if (str[i] >= 'A' && str[i] <= 'Z' && !bCap)
+			{
+				bCap = true;
+				nCount++;
+			}
+			else if (str[i] >= 'a' && str[i] <= 'z' && !bLow)
+			{
+				bLow = true;
+				nCount++;
+			}
+			else
+			{
+				if (!bOther)
+				{
+					bOther = true;
+					nCount++;
+				}
+			}
+		}
+
+		if (nCount < 3)
+			cout << "NG" << endl;
+		else
+		{
+			for (int i = 0; i < nlen; i++)
+			{
+				string strTmp = str.substr(i, 3);
+				size_t pos = str.find(strTmp, i + 3);
+				if (pos != string::npos)
+				{
+					cout << "NG" << endl;
+					break;
+				}
+			}
+			cout << "OK" << endl;
+		}
+	}
 }
 
 void testLinkNodeFunc()
@@ -566,8 +741,8 @@ void testLinkNodeFunc()
     JosephCircle(pHead, 5);
 }
 
-int main()
-{
+//int main()
+//{
     //testSeqList();
 
 	//testSList();
@@ -594,12 +769,12 @@ int main()
 
     //testString1();
 
-    testHuaWeiString();
+    //testHuaWeiString();
 
     //testLinkNodeFunc();
 
-	system("pause");
-
-	return 0;
-}
+//	system("pause");
+//
+//	return 0;
+//}
 

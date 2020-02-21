@@ -279,12 +279,11 @@ void testSort()
 	//DirectInsertSort(array, 10); 
 	//printArray(array, 10);
 	
-	//int d[3] = {5, 2, 1};
-	//ShellSort(array, 10, d, 3);
+	//ShellSort(array, 10);
 	//printArray(array, 10);
 
-	//SelectSort(array, 10);
-	//printArray(array, 10);
+	SelectSort(array, 10);
+	printArray(array, 10);
 
 	//HeapSort(array, 10);
 	//printArray(array, 10);
@@ -302,8 +301,8 @@ void testSort()
 	//printArray(array, 10);
 }
 
-//int main()
-//{
+int main()
+{
     //test3Sum();
 
     //test3SumClosest();
@@ -344,11 +343,11 @@ void testSort()
 
 	//testDistinctSubsequence();
 
-	//testSort();
+	testSort();
 
     //testThreadPool();
-//
-//    system("pause");
-//
-//    return 0;
-//}
+
+    system("pause");
+
+    return 0;
+}

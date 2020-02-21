@@ -3,7 +3,7 @@
 void BubbleSort(int a[], int n)
 {
 	int nFlag = 1;
-	for (int i = 1; i < n && 1 == nFlag; i++)
+	for (int i = 1; i < n && nFlag == 1; i++)
 	{
 		for (int j = 0; j < n - i; j++)
 		{
@@ -11,9 +11,9 @@ void BubbleSort(int a[], int n)
 			if (a[j] > a[j + 1])
 			{
 				nFlag = 1;
-				int nTemp = a[j];
+				int nTmp = a[j];
 				a[j] = a[j + 1];
-				a[j + 1] = nTemp;
+				a[j + 1] = nTmp;
 			}
 		}
 	}
